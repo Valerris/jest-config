@@ -1,4 +1,5 @@
 const jest = require("jest")
+const { configPath } = require("../utils/paths")
 
 module.exports = function jestRun(program) {
 	process.env.NODE_ENV = "test"
@@ -14,7 +15,7 @@ module.exports = function jestRun(program) {
 	opts.push(...program.args)
 
 	try {
-		jest.run(opts)
+		jest.run(opts, configPath)
 	} catch (e) {
 		console.error("\nError runnig Jest!\n")
 	}

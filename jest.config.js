@@ -1,10 +1,4 @@
-const path = require("path")
-
-const cwdSrcPath = path.resolve(process.cwd(), "src")
-const coverageDirectory = path.resolve(
-	process.cwd(),
-	"report/coverage"
-)
+const { srcPath, coverageDir } = require("./utils/paths")
 
 module.exports = {
 	bail: true,
@@ -17,19 +11,19 @@ module.exports = {
 		"!**/vendor/**",
 	],
 	coverageReporters: [["html", { subdir: "html" }]],
-	coverageDirectory,
+	coverageDirectory: coverageDir,
 	moduleNameMapper: {
 		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
 			"__mocks__/file.js",
 		"\\.([sc]?(a)ss|less)$": "identity-obj-proxy",
 	},
-	modulePaths: ["node_modules", cwdSrcPath],
+	modulePaths: ["node_modules", srcPath],
 	reporters: ["default"],
 	rootDir: ".",
-	roots: [cwdSrcPath],
-	setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+	roots: [srcPath],
+	setupFilesAfterEnv: ["./jest.setup.js"],
 	testEnvironment: "node",
 	timers: "fake",
 	transform: { "\\.[jt]sx?$": "./utils/transformer.js" },
-	watchPathIgnorePatterns: [`!${cwdSrcPath}`],
+	watchPathIgnorePatterns: [`!${srcPath}`],
 }
