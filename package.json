@@ -1,0 +1,32 @@
+{
+	"name": "@valerris/jest-config",
+	"version": "0.1.0",
+	"main": "jest.config.js",
+	"description": "Valerris jest configuration",
+	"author": "Valerris",
+	"license": "",
+	"bin": {
+		"vlrrs-jest": "bin/cli.js"
+	},
+	"private": true,
+	"scripts": {
+		"test": "cross-env NODE_ENV=test node bin/cli.js",
+		"test:w": "cross-env NODE_ENV=test node bin/cli.js --watch",
+		"test:u": "cross-env NODE_ENV=test node bin/cli.js --updateSnapshot"
+	},
+	"dependencies": {
+		"@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
+		"babel-jest": "^27.0.6",
+		"commander": "^8.0.0",
+		"enzyme": "^3.11.0",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^27.0.6"
+	},
+	"devDependencies": {
+		"@valerris/webpack-config": "git+https://github.com/Valerris/webpack-config.git",
+		"cross-env": "^7.0.3",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"styled-components": "^5.3.0"
+	}
+}
