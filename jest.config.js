@@ -1,4 +1,9 @@
-const { srcPath, coverageDir } = require("./utils/paths")
+const {
+	srcPath,
+	coverageDir,
+	setupFilesAfterEnvPath,
+	transformerPath,
+} = require("./utils/paths")
 
 module.exports = {
 	bail: true,
@@ -21,9 +26,9 @@ module.exports = {
 	reporters: ["default"],
 	rootDir: ".",
 	roots: [srcPath],
-	setupFilesAfterEnv: ["./jest.setup.js"],
+	setupFilesAfterEnv: [setupFilesAfterEnvPath],
 	testEnvironment: "node",
 	timers: "fake",
-	transform: { "\\.[jt]sx?$": "./utils/transformer.js" },
+	transform: { "\\.[jt]sx?$": transformerPath },
 	watchPathIgnorePatterns: [`!${srcPath}`],
 }
