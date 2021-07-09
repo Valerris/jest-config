@@ -30,5 +30,8 @@ module.exports = {
 	testEnvironment: "node",
 	timers: "fake",
 	transform: { "\\.[jt]sx?$": transformerPath },
+	transformIgnorePatterns: [
+		"node_modules/(?!(@valerris/jest-config)/)",
+	],
 	watchPathIgnorePatterns: [`!${srcPath}`],
 }
