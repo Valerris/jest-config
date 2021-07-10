@@ -1,4 +1,5 @@
 const {
+	rootPath,
 	srcPath,
 	coverageDir,
 	setupFilesAfterEnvPath,
@@ -24,8 +25,8 @@ module.exports = {
 	},
 	modulePaths: ["node_modules", srcPath],
 	reporters: ["default"],
-	rootDir: ".",
-	roots: [srcPath],
+	rootDir: rootPath,
+	roots: [rootPath],
 	setupFilesAfterEnv: [setupFilesAfterEnvPath],
 	testEnvironment: "node",
 	timers: "fake",

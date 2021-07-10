@@ -14,6 +14,7 @@ const transformerPath = path.resolve(
 )
 
 module.exports = {
+	rootPath,
 	srcPath,
 	coverageDir,
 	configPath,
