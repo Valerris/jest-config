@@ -18,6 +18,7 @@ module.exports = {
 	],
 	coverageReporters: [["html", { subdir: "html" }]],
 	coverageDirectory: coverageDir,
+	injectGlobals: false,
 	moduleNameMapper: {
 		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
 			"__mocks__/file.js",
@@ -28,7 +29,7 @@ module.exports = {
 	rootDir: rootPath,
 	roots: [rootPath],
 	setupFilesAfterEnv: [setupFilesAfterEnvPath],
-	testEnvironment: "node",
+	testEnvironment: "jsdom",
 	timers: "fake",
 	transform: { "\\.[jt]sx?$": transformerPath },
 	transformIgnorePatterns: [
