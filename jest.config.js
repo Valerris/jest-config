@@ -3,6 +3,7 @@ const {
 	srcPath,
 	coverageDir,
 	setupFilesAfterEnvPath,
+	setupExtendedFilesAfterEnvPath,
 	transformerPath,
 } = require("./utils/paths")
 
@@ -28,8 +29,11 @@ module.exports = {
 	reporters: ["default"],
 	rootDir: rootPath,
 	roots: [rootPath],
-	setupFilesAfterEnv: [setupFilesAfterEnvPath],
-	testEnvironment: "jsdom",
+	setupFilesAfterEnv: [
+		setupFilesAfterEnvPath,
+		setupExtendedFilesAfterEnvPath,
+	],
+	testEnvironment: "jest-environment-jsdom",
 	timers: "fake",
 	transform: { "\\.[jt]sx?$": transformerPath },
 	transformIgnorePatterns: [

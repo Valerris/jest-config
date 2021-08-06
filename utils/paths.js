@@ -1,14 +1,18 @@
 const path = require("path")
 
-const rootPath = path.resolve(process.cwd())
-const srcPath = path.resolve(rootPath, "src")
-const coverageDir = path.resolve(rootPath, "report/coverage")
-const configPath = path.resolve(__dirname, "../jest.config.js")
-const setupFilesAfterEnvPath = path.resolve(
+const rootPath = path.normalize(process.cwd())
+const srcPath = path.join(rootPath, "src")
+const coverageDir = path.join(rootPath, "report/coverage")
+const configPath = path.join(__dirname, "../jest.config.js")
+const setupFilesAfterEnvPath = path.join(
 	__dirname,
 	"../jest.setup.js"
 )
-const transformerPath = path.resolve(
+const setupExtendedFilesAfterEnvPath = path.join(
+	rootPath,
+	"jest.setup.js"
+)
+const transformerPath = path.join(
 	__dirname,
 	"../utils/transformer.js"
 )
@@ -19,5 +23,6 @@ module.exports = {
 	coverageDir,
 	configPath,
 	setupFilesAfterEnvPath,
+	setupExtendedFilesAfterEnvPath,
 	transformerPath,
 }

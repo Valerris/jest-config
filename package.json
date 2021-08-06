@@ -12,7 +12,8 @@
 	"scripts": {
 		"test": "node bin/cli.js",
 		"test:w": "node bin/cli.js --watch",
-		"test:u": "node bin/cli.js --updateSnapshot"
+		"test:wAll": "node bin/cli.js --watchAll",
+		"test:u": "node bin/cli.js --update"
 	},
 	"dependencies": {
 		"@testing-library/dom": "^8.1.0",
