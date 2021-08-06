@@ -10,9 +10,9 @@
 	},
 	"private": true,
 	"scripts": {
-		"test": "cross-env NODE_ENV=test node bin/cli.js",
-		"test:w": "cross-env NODE_ENV=test node bin/cli.js --watch",
-		"test:u": "cross-env NODE_ENV=test node bin/cli.js --updateSnapshot"
+		"test": "node bin/cli.js",
+		"test:w": "node bin/cli.js --watch",
+		"test:u": "node bin/cli.js --updateSnapshot"
 	},
 	"dependencies": {
 		"@testing-library/dom": "^8.1.0",
@@ -27,7 +27,6 @@
 	},
 	"devDependencies": {
 		"@valerris/webpack-config": "git+https://github.com/Valerris/webpack-config.git",
-		"cross-env": "^7.0.3",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"styled-components": "^5.3.0"
