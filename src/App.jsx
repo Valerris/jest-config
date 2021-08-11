@@ -15,7 +15,7 @@ async function f() {
 
 export default function App() {
 	useEffect(() => {
-		// f()
+		f()
 	})
 
 	return (
