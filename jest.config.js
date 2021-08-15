@@ -34,7 +34,7 @@ module.exports = {
 		setupExtendedFilesAfterEnvPath,
 	],
 	testEnvironment: "jsdom",
-	timers: "fake",
+	// timers: "fake",
 	transform: { "\\.[jt]sx?$": transformerPath },
 	transformIgnorePatterns: [
 		"node_modules/(?!(@valerris/jest-config)/)",

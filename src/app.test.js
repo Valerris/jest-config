@@ -5,8 +5,6 @@ describe("Sample: ", () => {
 	test("test", () => {
 		render(<App />)
 
-		screen.debug()
-
 		expect(true).toBe(true)
 	})
 })

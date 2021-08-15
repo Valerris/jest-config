@@ -27,10 +27,12 @@
 		"enzyme": "^3.11.0",
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^27.0.6",
-		"jest-fetch-mock": "^3.0.3"
+		"whatwg-fetch": "^3.6.2"
 	},
 	"devDependencies": {
 		"@valerris/webpack-config": "git+https://github.com/Valerris/webpack-config.git",
+		"faker": "^5.5.3",
+		"msw": "^0.34.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"styled-components": "^5.3.0"
