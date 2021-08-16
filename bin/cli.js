@@ -6,6 +6,7 @@ const jestRun = require("./jestRun")
 
 program
 	.version(version)
+	.allowUnknownOption()
 	.usage("[options]")
 	.option("-u, --update", "re-record every snapshot that fails")
 	.option(
